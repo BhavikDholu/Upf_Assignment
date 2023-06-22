@@ -122,7 +122,9 @@ function Dashboard() {
 
     const handleCsvfile = async()=>{
         try {
-            let res = await fetch(`${process.env.REACT_APP_BASE_UR}/export/csv`);
+            let res = await fetch(
+              `https://weak-pear-chimpanzee-hose.cyclic.app/user/export/csv`
+            );
             let data = await res.json()
         } catch (error) {
             console.log(error);
