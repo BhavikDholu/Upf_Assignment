@@ -121,10 +121,9 @@ function Dashboard() {
     }
 
     const handleCsvfile = async()=>{
-        setLoading(true);
         try {
             let res = await fetch(`${process.env.REACT_APP_BASE_UR}/export/csv`);
-            setLoading(false)
+            let data = await res.json()
         } catch (error) {
             console.log(error);
             setLoading(false);
